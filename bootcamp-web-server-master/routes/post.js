@@ -1,10 +1,10 @@
 import express from 'express';
 
 import asyncMiddleware from '../middlewares/asyncMiddleware';
-import index from '../controllers/indexController';
+import { getPostyById } from '../controllers/postController';
 
 const router = express.Router();
 
-router.get('/', asyncMiddleware(index));
+router.get('/:postId', asyncMiddleware(getPostById));
 
 export default router;

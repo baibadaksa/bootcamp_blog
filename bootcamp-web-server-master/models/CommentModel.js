@@ -4,7 +4,8 @@ const commentSchema = new mongoose.Schema(
   {
     message: { type: String, trim: true, unique: false, required: true },
     username: { type: String, unique: false, required: true },
-    mediaId: { type: String, unique: false, required: true },
+    postId: { type: String, unique: false, required: true },
+
   },
   { timestamps: true },
 );
@@ -13,6 +14,6 @@ const CommentModel = mongoose.model('Comment', commentSchema);
 
 const save = async model => new CommentModel(model).save();
 
-const getCommentsByPost = async mediaId => CommentModel.find({ mediaId });
+const getCommentsByPost = async postId => CommentModel.find({ postId });
 
 export { save, getCommentsByPost, commentSchema };

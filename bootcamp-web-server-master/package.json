@@ -1,7 +1,7 @@
 {
   "name": "bootcamp-web-server",
   "version": "1.0.0",
-  "description": "\"Instagram\" like application API",
+  "description": "Blog project for Accenture Bootcamp",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon --exec babel-node ./server.js",
@@ -10,14 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Makapoh54/bootcamp-web-server.git"
+    "url": "https://github.com/baibadaksa/bootcamp_blog.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Makapoh54/bootcamp-web-server/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/Makapoh54/bootcamp-web-server#readme",
   "dependencies": {
     "bcrypt": "^2.0.1",
     "body-parser": "^1.18.3",

@@ -2,12 +2,9 @@ import mongoose from 'mongoose';
 
 const postSchema = new mongoose.Schema(
   {
-    title: { type: String, trim: true, unique: false, required: true },
-    username: { type: String, required: true, unique: false },
-    media: {
-      contentId: { type: String, unique: true, required: true },
-      path: { type: String, unique: true, required: true },
-    },
+    title: {type: String, trim: true, unique: false, required: true},
+    username: {type: String, required: true, unique: false},
+    content: {type: String, trim: true, unique: false},
   },
   { timestamps: true },
 );
@@ -20,6 +17,6 @@ const getPostByUser = async username => PostModel.findOne({ username });
 
 const getPostById = async _id => PostModel.findById({ _id });
 
-const getRandomPosts = async () => PostModel.find();
+const getRandomPosts = async () => PostModel.find({});
 
 export { save, getPostByUser, getRandomPosts, getPostById };
